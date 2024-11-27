@@ -4,31 +4,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>document</title>
+    <title>Bookmarker</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Pacifico&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Pacifico&family=Righteous&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/all.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/media.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-   
 </head>
 
 <body>
-    <div class="text-center">
-        <div class="container">
-            <h1 class="p-5 m-2">Quote of the Day</h1>
-        <p>Press the button below to recieve a random quote!</p>
-        <button class="py-3 px-5 my-4 btn btn-success border rounded-5" onclick="fun_qoute()">New Quote</button>
-        <p id="text-qoute" class="mb-4"></p>
-        <p id="text-author"></p>
-        </div>
+    <div class="bookmarker">
+        <div class="container d-flex flex-column justify-content-center align-items-center">
+            <h1 class="m-5 position-relative">Bookmarker</h1>
+            <div class="body w-100 py-4 p-3 mt-3 d-flex flex-column justify-content-center align-items-center">
+                <h2 class="mb-4">
+                    <i class="fa-solid fa-bookmark"></i>
+                    "Bookmark your favorite sites"
+                    <i class="fa-solid fa-bookmark"></i>
+                </h2>
+                <div class="site_name mb-3 w-100">
+                    <label for="sitename" class="pb-2 fw-bold">
+                        <i class="fa-solid fa-book-bookmark pe-2"></i>
+                        Site Name
+                    </label>
+                    <input type="text" placeholder="BOOKmark Name" class="form-control" id="sitename">
+                </div>
+                <div class="site_url mb-4 w-100">
+                    <label for="siteurl" class="pb-2 fw-bold">
+                        <i class="fa-solid fa-link pe-2"></i>
+                        Site URL
+                    </label>
+                    <input type="text" placeholder="BOOKmark URL" class="form-control" id="siteurl">
+                </div>
+                <button type="button" id="submitsite" onclick="addSite()" class="btn px-5 button_sub ">Submit</button>
+            </div>
 
-        
+            <input type="text" onkeyup="search()" class="mt-4 form-control w-50 "  placeholder="search..." id="sitesearch">
+            <table class="table mt-4 text-center bg-light   align-middle ">
+                <thead>
+                    <tr>
+                        <th> Index</th>
+                        <th>Website Name </th>
+                        <th> Visit</th>
+                        <th>Delete</th>
+                        <th>Update</th>
+                    </tr>
+                </thead>
+                <tbody  id="myTable">
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>
+                            <a href="" target="_blank"><button class="btn btn-warning">
+                                <i class="fa-solid fa-eye me-2"></i>
+                                visit</button></a>
+                        </td>
+                        <td><button class="btn btn-danger">
+                            <i class="fa-solid fa-trash-can me-2"></i>
+                            delete</button></td>
+                            <td><button class="btn btn-success">
+                                <i class="fa-solid fa-pen me-2"></i>
+                                update</button></td>
+
+                    </tr> 
+                  
+                
+                </tbody>
+            </table>
+
+        </div>
     </div>
 
     <script src="js/bootstrap.bundle.min.js"></script>
