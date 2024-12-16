@@ -1,0 +1,79 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document</title>
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+
+</head>
+
+<body>
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top p-3">
+        <div class="container">
+            <a class="nav_brand text-decoration-none text-white fw-bold " href="#">SMART LOGIN</a>
+            <button onclick="logout()" type="button" id="logout" class="nav-btn  btn btn-outline-warning">
+                <a href="#"  class="text-decoration-none text-white">log out</a></button>
+        </div>
+    </nav>
+
+
+    
+        <div class="body container w-75   d-flex align-items-center  ">
+            <div class="m-auto py-5 " >
+                <h1 id="bow" class="text-center">Welcome</h1>
+            </div>
+        </div>
+
+
+        <div class="container my-5 text-center ">
+            <div class="d-none first m-auto w-75 mt-5 p-5">
+    
+                <h1 class="text-center mb-4">Smart Login System</h1>
+                <input type="email" class="form-control mb-2 " placeholder="Enter Your Email " id="femail_input">
+                <input type="password" placeholder="Enter Your Password" class="form-control mb-4  " id="fpassword_input">
+    
+                <p id="fincorrect" class="d-none text-danger">All inputs is required</p>
+                <p id="finput_incorrect" class="d-none text-danger">incorrect email or password</p>
+                <button class="form-control mb-4 btn btn-outline-info"  onclick="login()">
+                    <a href="#" id="join" class="text-decoration-none "> Log In</a>
+                </button>
+                <p class="text-center text-white">Don’t have an account?
+                    <a class="text-white" href="page.html" id="signup" >Sign UP</a>
+                </p>
+    
+            </div>
+        </div> 
+    
+        <div class=" container my-5 text-center   ">
+            <div class="second d-none m-auto w-75 mt-5 p-5">
+    
+                <h1 class="text-center mb-4">Smart Login System</h1>
+                <input type="text" class="form-control mb-2 " placeholder="Enter Your Name " id="sname_input">
+                <input type="email" class="form-control mb-2 " placeholder="Enter Your Email " id="semail_input">
+                <input type="password" placeholder="Enter Your Password" class="form-control mb-4  " id="spassword_input">
+    
+                <p id="sincorrect" class="d-none text-danger">All inputs is required</p>
+                <p id="success" class="d-none  text-success">Success</p>
+                <p id="namevalid" class="d-none text-danger">Enter Valid Name</p>
+                <p id="email_valid" class="d-none text-danger">Enter Valid Email</p>
+                <p id="pass_valid" class="d-none text-danger">Enter Valid Password</p>
+                <button class="form-control mb-4 btn btn-outline-info  " onclick="signup()">Sign Up</button>
+                <p class="text-center text-white">You have an account?
+                    <a class="text-white" href="index.html" id="signin"  >Sign In</a>
+                </p>
+    
+            </div>
+        </div> 
+    
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
